@@ -66,7 +66,7 @@ def compute_stats(df, note_cols, name_col):
             "Max":           max(vals),
             "Min":           min(vals),
             "Médiane":       round(np.median(vals), 2),
-            "Écart-type":    round(np.std(vals), 2),
+            "Ecart-type":    round(np.std(vals), 2),
             "Nb notes":      len(vals),
             "Mention":       ml,
         })
@@ -114,7 +114,7 @@ with st.sidebar:
     st.caption("ℹ️ Les notes 0 sont comptabilisées comme de vraies notes.")
 
 # ── EN-TÊTE ──────────────────────────────────────────────────────────────────
-st.markdown('<div class="main-title">📊 Tableau de Bord — Analyse des Notes</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">📊 Tableau de Bord MICS7 — Analyse des Notes du Pré-test PAPI CI</div>', unsafe_allow_html=True)
 st.markdown(f'<div class="sub-title">{df.shape[0]} agents · {len(note_cols)} évaluations · Les zéros sont des notes réelles</div>', unsafe_allow_html=True)
 
 # ── CALCULS GLOBAUX ──────────────────────────────────────────────────────────
@@ -153,7 +153,7 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
 # ONGLET 1 – COURBES INDIVIDUELLES
 # ───────────────────────────────────────────
 with tab1:
-    st.markdown('<div class="section-title">Évolution individuelle des notes</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Evolution individuelle des notes</div>', unsafe_allow_html=True)
     st.caption("Les 0 sont affichés comme notes réelles. Lignes de seuil à 10 et 14.")
 
     if not selected_agents:
